@@ -25,9 +25,7 @@ export class EmplAddComponent {
   
     }
     save(formValues: any) {
-  
-      console.log(formValues);
-      console.log(this.employeeService.newDatafromAdd (formValues.firstName , formValues.lastName, formValues.userName , formValues.password));
+      this.employeeService.newDatafromAdd (formValues.firstName , formValues.lastName, formValues.userName , formValues.password);
       this.router.navigate(['/employeeList']);
 
     } 

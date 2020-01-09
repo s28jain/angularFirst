@@ -19,7 +19,7 @@ export class EmployeeService {
 
     //ADD
     newIdFromList (empList: IEmployee[]) {
-        this.employeeList = empList
+        this.employeeList = empList;
         this.id_n = this.employeeList.length+1; 
     }
 
@@ -60,10 +60,10 @@ export class EmployeeService {
     [
         {
             "id": 1,
-            "firstName" : "Erhan",
-            "lastName" : "Yenigun",
-            "userName" : "eyenigun",
-            "password" : "qwer1234"
+            "firstName" : "Sakshi",
+            "lastName" : "Jain",
+            "userName" : "ejasaks",
+            "password" : "pass123"
         
         },
         {

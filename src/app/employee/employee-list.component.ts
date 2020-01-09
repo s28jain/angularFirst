@@ -1,4 +1,4 @@
-import { Component, Injectable } from '@angular/core';
+import { Component } from '@angular/core';
 import { IEmployee } from './employee.model';
 import { EmployeeService } from './employee.service';
 import { Router } from '@angular/router';
@@ -11,14 +11,14 @@ import { Router } from '@angular/router';
 })
 
 export class EmployeeListComponent {
-  title:string = 'EmployeeV5';
+  title:string = 'Employee';
 
     constructor (private employeeService : EmployeeService, private router:Router ) {
 
     }
  
  
-  employeeList : IEmployee[] = [ ]
+  employeeList : IEmployee[] = [ ];
   
   ngOnInit(): void {
   this.employeeList = this.employeeService.getAllEmployees();
