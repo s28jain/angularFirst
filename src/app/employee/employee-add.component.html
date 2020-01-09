@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Angular Assignment</title>
+       <base href="/">
+    </head>
+    
+    
+    <body>
+        <h1>{{title}}</h1>
+
+ <!-- Adding Employees-->
+  
+<div>
+<form #loginForm="ngForm" (ngSubmit)="save(loginForm.value)" 
+
+autocomplete="off">
+  
+  <div class="form-group" >
+    <label for="firstName">First Name:</label>
+    <input [(ngModel)]="firstName" name="firstName" 
+    id="fname" type="text" class="form-control" placeholder=" " />
+  </div>
+  
+  <br/>
+
+  <div class="form-group" >
+    <label for="lastName">Last Name:</label>
+  <input [(ngModel)]="lastName" name="lastName"
+   id="lname" type="text" class="form-control" placeholder=" " />
+  </div>
+
+  <br/>
+  <div class="form-group" >
+    <label for="userName">User Name:</label>
+    <input [(ngModel)]="userName" name="userName" 
+    id="userName" type="text" class="form-control" placeholder=" " />
+  </div>
+
+  <br/>
+
+  <div class="form-group" >
+    <label for="password">Password:</label>
+    <input [(ngModel)]="password" name="password" 
+    id="password" type="text" class="form-control" placeholder=" " />
+  </div>
+      
+  <br/>
+
+  <div *ngIf='firstName && lastName && userName && password'>
+  <button  type="submit" class="btn btn-primary">Save</button>  <br/>
+  </div>
+  
+  <div *ngIf='firstName || lastName || userName || password'>
+  <button type="reset" class="btn btn-default">Reset</button>
+</div>
+</form>
+
+<button  type="cancel" (click)="cancel()" class="btn btn-primary">Cancel</button>  <br/>
+     
+<h4> Input values: {{firstName + " " + lastName + " " + userName + " " + password }} </h4>
+</div>
+
+
+</body>

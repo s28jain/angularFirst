@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+.pointable {
+    cursor: pointer;
+  }
+  
+  button {
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+  }
+
+  input[type=text], input[type=password] {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  label{
+    color: #000;
+    font-size: large;
+    font-weight: bold;
+  }
+
+  /*.toast {
+    opacity: 1 !important;
+  }*/
+  #toast-container > div {
+    opacity: 1;
+  }
+  .toast-success {
+    background-color: #51a351;
+  }
+  .toast-error {
+    background-color: #bd362f;
+  }
+  .toast-info {
+    background-color: #2f96b4;
+  }
+  .toast-warning {
+    background-color: #f89406;
+  }

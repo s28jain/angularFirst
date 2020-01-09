@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Angular Assignment</title>
+       
+    </head>
+    
+    
+    <body>
+        <h1>{{title}}</h1>
+
+<!-- List Employees-->
+<div >
+  <nav class='navbar navbar-expand navbar-light bg-light'>
+    <a class='navbar-brand'></a>
+ 
+    <ul class='nav nav-pills'>
+      <li><a class='nav-link' [routerLink]="['/']">Signout</a></li>  
+      <button type="button" (click)="addEmployeePage()" class="btn btn-default">Add New Employee</button>
+      <button type="button" (click)="test()" class="btn btn-default">Edit First Employee to all b</button>
+   
+
+    </ul> 
+
+    </nav>
+   <div class='container'>
+      <router-outlet></router-outlet>
+    </div>
+
+
+  <div> <h2>Listing Employees </h2> </div>
+
+  <br/>
+  
+
+  <div>
+    <table class='table' >
+      <thead>
+        <tr>
+          <th> ID </th>
+          <th> Name   </th> 
+          <th> Surname  </th>
+          <th>Username  </th>
+          <th>Password  </th>
+        </tr>
+      </thead>
+
+
+      <tbody>
+        <tr *ngFor='let employee of employeeList'>
+          <td>{{employee.id}}</td>
+          <td>{{employee.firstName}}</td>
+          <td>{{employee.lastName}}</td>
+          <td>{{employee.userName}}</td>
+          <td>{{employee.password}}</td>
+     
+      </tbody>
+
+    </table>
+  </div> 
+  </div>
+</body>
+</html>
