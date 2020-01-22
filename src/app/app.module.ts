@@ -13,6 +13,11 @@ import {JQ_TOKEN} from './common/jQuery.service';
 import {EmployeeListComponent} from './employee/employee-list.component';
 import {EmployeeService} from './employee/employee.service';
 import {EmplAddComponent} from './employee/employee-add.component';
+import { EmployeeIOComponent } from './employee/employee-io.component';
+import { EmployeeDetailsComponent } from './employee/employee-details.component';
+import {NumberOfYears} from './employee/numberofYears.component';
+import {HttpClientModule} from '@angular/common/http';
+
 //import {ToastrModule} from 'ngx-toastr';
 //import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -25,13 +30,16 @@ let jQuery = window['$'];
     Error404Component,
     LoginComponent,
     EmployeeListComponent,
-    EmplAddComponent
-
+    EmplAddComponent,
+    EmployeeIOComponent,
+    EmployeeDetailsComponent,
+    NumberOfYears
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    HttpClientModule
     //,BrowserAnimationsModule,
     //ToastrModule.forRoot()
   ],

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Angular Assignment</title>
+       
+    </head>
+    
+    <body>
+      <h1>{{title}}</h1>
+     
+      
+    <!--  Employee Details Page -->
+ 
+    <div class='container'>
+      
+    <table class='table' >
+      <thead>
+        <tr>
+                   
+          <th> ID </th>
+          <th> Firstname</th> 
+          <th> Surname   </th>
+          <th>Username  </th>
+          <th>Password  </th>
+          <th>Number of Years</th>
+        </tr>
+      </thead>
+
+
+      <tbody>
+        <tr >
+          <td>{{employee.id}}</td>
+
+          <td> {{employee.firstName}}</td>
+
+          <td> {{employee.lastName}}</td>
+         
+          <td>{{employee.userName}}</td>
+          <td>{{employee.password}}</td>
+          <td>{{employee.numberofYears}}</td>
+
+       
+      </tbody>
+
+    </table>
+ 
+  </div>
+
+  <div >
+    <nav class='navbar navbar-expand navbar-light bg-light'>
+      <a class='navbar-brand'></a>
+   
+      <ul class='nav nav-pills'>
+
+  
+        <button type="button" (click)="editThisEmployee()" class="btn btn-default">Edit This Employee to all b</button>
+        <button type="button" (click)="goToEmployeeListPage()" class="btn btn-default">Employee List</button>
+
+        <li><a class='nav-link' [routerLink]="['/']">Signout</a></li>  
+
+      </ul> 
+  
+      </nav>
+     
+  </div>
+</body>
+</html>

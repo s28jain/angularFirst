@@ -10,13 +10,13 @@ import {TOASTR_TOKEN, Toastr} from '../common/toastr.service';
   em {float:right; color:red; padding-left:10px;}
   `]
 })
+//declare var require: any
 export class LoginComponent {
+    //imgname= require("/app/assets/images/info.png");
 
     constructor(private authService:AuthService, private router:Router, @Inject(TOASTR_TOKEN) private toastr: Toastr ){// private toastr:ToastrService
-
     }
-   
-    
+
     login (value){
         console.log(value);
         if (this.authService.isAuthenticated(value)){
@@ -26,7 +26,6 @@ export class LoginComponent {
         }else{
             this.toastr.warning("Login Failed - Please enter correct Admin Credentials ");
         }
-
     }
 
     info() {

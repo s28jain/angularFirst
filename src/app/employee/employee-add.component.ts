@@ -11,21 +11,30 @@ import {TOASTR_TOKEN, Toastr} from '../common/toastr.service';
      })
 
 export class EmplAddComponent {
-    title:string = 'Add Employee';
+  title:string = 'Add Employee';
+  employees : IEmployee[] = [ ]
+
+  employeeList : IEmployee[] = [ ]
+  errorMessage:string;
+
 
     constructor (private employeeService : EmployeeService, private router:Router,  @Inject(TOASTR_TOKEN) private toastr: Toastr ) {
   
       }
    
-  
-    employees : IEmployee[] = [ ]
-    ngOnInit(): void {
-  
+    /*ngOnInit(): void {
       this.employees = this.employeeService.getAllEmployees();
-  
+    }*/
+    
+    ngOnInit(): void {
+      this.employeeService.getAllEmployees().subscribe({
+        next :employees=> this.employeeList=employees,
+        error :err=>this.errorMessage=err
+      });
+    
     }
     save(formValues: any) {
-      this.employeeService.newDatafromAdd (formValues.firstName , formValues.lastName, formValues.userName , formValues.password);
+      //this.employeeService.newDatafromAdd (formValues.firstName , formValues.lastName, formValues.userName , formValues.password, );
       this.router.navigate(['/employeeList']);
 
     } 

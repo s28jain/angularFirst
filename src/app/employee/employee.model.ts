@@ -4,4 +4,5 @@ export interface IEmployee {
     lastName:string
     userName: string
     password: string
+    numberofYears : number
 }

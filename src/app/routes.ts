@@ -4,6 +4,8 @@ import {Routes} from '@angular/router'
 import { Error404Component } from './common/404.component';
 import {EmployeeListComponent} from './employee/employee-list.component';
 import { EmplAddComponent } from './employee/employee-add.component';
+import {EmployeeIOComponent} from "./employee/employee-io.component";
+import { EmployeeDetailsComponent } from './employee/employee-details.component';
 
 
 export const appRoutes: Routes= [
@@ -12,7 +14,10 @@ export const appRoutes: Routes= [
     { path: 'login', component: LoginComponent},
     { path:'employeeList', component:EmployeeListComponent},
     {path:'addemployee', component: EmplAddComponent },
-   // {path:'editemployee', component: EmplAddComponent }, new comp
+    {path: 'employeeIO', component:EmployeeIOComponent},
+    { path:'employeeDetails', component:EmployeeDetailsComponent},
+
+   // {path:'editemployee', component: EmplEditComponent }, //new comp
 
 
 

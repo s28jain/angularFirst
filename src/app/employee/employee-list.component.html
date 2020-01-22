@@ -35,10 +35,11 @@
       <thead>
         <tr>
           <th> ID </th>
-          <th> Name   </th> 
+          <th> Firstname   </th> 
           <th> Surname  </th>
           <th>Username  </th>
           <th>Password  </th>
+          <th>Number of Years</th>
         </tr>
       </thead>
 
@@ -46,10 +47,36 @@
       <tbody>
         <tr *ngFor='let employee of employeeList'>
           <td>{{employee.id}}</td>
-          <td>{{employee.firstName}}</td>
+          <td>
+            <!-- This is property binding to the nested/child component for the number of years 
+              and
+              event binding for the clicked event--> 
+    
+          <employee-io
+         
+           [employee]='employee'
+    
+           (eventClick)='onEmployeeSelected(employee.id, $event)'>
+                 
+          </employee-io> 
+          </td> 
+     
           <td>{{employee.lastName}}</td>
           <td>{{employee.userName}}</td>
           <td>{{employee.password}}</td>
+          <td>
+            <!-- This is property binding to the nested/child component for the number of years 
+              and
+              event binding for the clicked event--> 
+    
+          <emp-years 
+         
+           [years]='employee.numberofYears'
+    
+           (employeeSelected)='onEmployeeSelected(employee.id, $event)'>
+                 
+          </emp-years> 
+          </td> 
      
       </tbody>
 
